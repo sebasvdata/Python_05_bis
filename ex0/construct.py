@@ -2,7 +2,7 @@ import sys
 import site
 
 
-def main():
+def main() -> None:
     in_venv = sys.prefix != sys.base_prefix
 
     if in_venv:

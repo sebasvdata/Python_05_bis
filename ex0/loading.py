@@ -20,7 +20,7 @@ def check_dependency(name: str, description: str) -> bool:
         return False
 
 
-def main():
+def main() -> None:
     print("REAGENT STATUS: Loading reagents...")
     print("Checking dependencies:")
 
