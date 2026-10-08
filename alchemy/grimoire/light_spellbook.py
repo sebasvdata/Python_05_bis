@@ -8,7 +8,7 @@ def light_spell_record(
         ingredients: str
         ) -> str:
     from . import light_validator
-    if light_validator.validate_ingredients(ingredients.lower()) == "VALID":
-        return f"Spell recorded: {spell_name} ({ingredients} - VALID)"
-    else:
-        return f"Spell rejected: {spell_name} ({ingredients} - INVALID)"
+    result = light_validator.validate_ingredients(ingredients)
+    if "INVALID" in result:
+        return f"Spell rejected: {spell_name} ({result})"
+    return f"Spell recorded: {spell_name} ({result})"

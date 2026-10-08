@@ -1,3 +1,4 @@
+import os
 import sys
 import site
 
@@ -8,7 +9,7 @@ def main() -> None:
     if in_venv:
         print("LABORATORY STATUS: The laboratory is sealed")
         print(f"Current Python: {sys.executable}")
-        print(f"Virtual Environment: {sys.prefix}")
+        print(f"Virtual Environment: {os.path.basename(sys.prefix)}")
         print(f"Environment Path: {sys.prefix}")
         print("SUCCESS: You are working in an isolated environment!")
         print("Safe to install reagents without affecting")

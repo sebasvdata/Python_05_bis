@@ -9,7 +9,7 @@ def dark_spell_record(
         spell_name: str,
         ingredients: str
         ) -> str:
-    if dark_validator.validate_ingredients(ingredients) == "VALID":
-        return f"Spell recorded: {spell_name} ({ingredients} - VALID)"
-    else:
-        return f"Spell rejected: {spell_name} ({ingredients} - INVALID)"
+    result = dark_validator.validate_ingredients(ingredients)
+    if "INVALID" in result:
+        return f"Spell rejected: {spell_name} ({result})"
+    return f"Spell recorded: {spell_name} ({result})"
