@@ -1,12 +1,6 @@
 import importlib
 
 
-DEPENDENCIES = {
-    "pandas": "Data manipulation ready",
-    "numpy": "Numerical computation ready",
-}
-
-
 def check_dependency(name: str, description: str) -> bool:
     try:
         module = importlib.import_module(name)
@@ -26,7 +20,11 @@ def main() -> None:
 
     all_present = True
 
-    for name, description in DEPENDENCIES.items():
+    dependencies = {
+        "pandas": "Data manipulation ready",
+        "numpy": "Numerical computation ready",
+    }
+    for name, description in dependencies.items():
         if not check_dependency(name, description):
             all_present = False
 
