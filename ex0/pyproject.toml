@@ -1,15 +1,17 @@
 [tool.poetry]
-name = "sealed-laboratory"
+name = "test-package"
 version = "0.1.0"
-description = "42 Python Exercise 0"
-authors = ["student"]
-package-mode = false
+description = "This is just a test to see how poetry works"
+authors = ["Sebas"]
+license = "GNL"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10"
-pandas = ">=2.1.0"
-numpy = ">=1.25.0"
+numpy = "1.25.0"
+pandas = "2.1.0"
+
 
 [build-system]
-requires = ["poetry-core>=2.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
